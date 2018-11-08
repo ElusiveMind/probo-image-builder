@@ -12,3 +12,4 @@
     - { role: 'ubuntu-postgres' }
     - { role: 'ubuntu-nodejs-6.x' }
     - { role: 'ubuntu-probo' }
+    - { role: 'ubuntu-mailcatcher' }
