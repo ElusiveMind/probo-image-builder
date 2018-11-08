@@ -1,0 +1,19 @@
+---
+
+- name: mailcatcher - update all of the things
+  shell: apt-get update
+
+- name: mailcatcher - install sqlite3-dev
+  shell: apt-get install -y libsqlite3-dev
+  
+- name: mailcatcher - install ruby-dev
+  shell: apt-get install -y ruby-dev
+
+- name: mailcatcher - install rails
+  shell: gem install rails
+
+- name: mailcatcher - install mailcatcher
+  shell: gem install mailcatcher
+
+
+  
