@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+cd /root
+tar -xzf 8.1.17.tar.gz
+cp drush-psql.patch ./drush-8.1.17
+cd drush-8.1.17
+patch -p1 < drush-psql.patch
+composer install
+cd /usr/local/bin/
+ln -s /root/drush-8.1.17/drush drush

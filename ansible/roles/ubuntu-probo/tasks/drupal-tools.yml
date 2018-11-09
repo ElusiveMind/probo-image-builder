@@ -1,10 +1,36 @@
 ---
 
-- name: install drush
+- name: add composer install script
+  copy:
+    src: install-composer
+    dest: /root/install-composer
+    mode: 0750
+
+- name: run composer install
+  command: /root/install-composer
+  args:
+    creates: /usr/local/bin/composer
+
+- name: download drush
   get_url:
-    url: https://github.com/drush-ops/drush/releases/download/8.1.11/drush.phar
-    dest: /usr/local/bin/drush
+    url: https://github.com/drush-ops/drush/archive/8.1.17.tar.gz
+    dest: /root/8.1.17.tar.gz
     mode: 0755
+
+- name: add patch to drush for psql
+  copy:
+    src: drush-psql.patch
+    dest: /root/drush-psql.patch
+    mode: 0755
+
+- name: add drush installer
+  copy:
+    src: install-drush
+    dest: /root/install-drush
+    mode: 0750
+
+- name: run drush installer
+  command: /root/install-drush
 
 - name: add drupal console install script
   copy:
@@ -17,13 +43,3 @@
   args:
     creates: /usr/local/bin/drupal
 
-- name: add composer install script
-  copy:
-    src: install-composer
-    dest: /root/install-composer
-    mode: 0750
-
-- name: run composer install
-  command: /root/install-composer
-  args:
-    creates: /usr/local/bin/composer

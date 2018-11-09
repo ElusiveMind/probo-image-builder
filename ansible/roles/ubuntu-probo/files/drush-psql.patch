@@ -1,0 +1,13 @@
+diff --git a/lib/Drush/Sql/Sqlpgsql.php b/lib/Drush/Sql/Sqlpgsql.php
+index e0fc46ce..082cc991 100644
+--- a/lib/Drush/Sql/Sqlpgsql.php
++++ b/lib/Drush/Sql/Sqlpgsql.php
+@@ -6,7 +6,7 @@ define('PSQL_SHOW_TABLES', "SELECT tablename FROM pg_tables WHERE schemaname='pu
+ 
+ class Sqlpgsql extends SqlBase {
+ 
+-  public $query_extra = "--no-align --field-separator=\"\t\" --pset tuples_only=on";
++  public $query_extra = "";
+ 
+   public $query_file = "--file";
+ 

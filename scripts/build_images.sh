@@ -173,9 +173,9 @@ build_ubuntu-lamp-php-7.2-beta-images () {
 #build_ubuntu-14.04-lamp-php-7.2-beta
 
 #build_ubuntu-16.04-beta-images
-build_ubuntu-16.04-lamp-latest
+#build_ubuntu-16.04-lamp-latest
 #build_ubuntu-16.04-lamp-php-7.0-beta
-#build_ubuntu-16.04-lamp-php-7.1-beta
+build_ubuntu-16.04-lamp-php-7.1-beta
 #build_ubuntu-16.04-lamp-php-7.2-beta
 
 # Build the PHP 5 beta images.
