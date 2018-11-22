@@ -32,7 +32,7 @@
     [
       {
         "type": "docker-tag",
-        "tag": "latest",
+        "tag": "latest-intermediary",
         "repository": "mbagnall/ubuntu-14.04"
       }
     ]
