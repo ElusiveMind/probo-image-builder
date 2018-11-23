@@ -3,7 +3,7 @@
 - name: install mysql
   apt: name={{ item }} state=present
   with_items:
-    - 'mysql-server'
+    - 'mariadb-server'
 
 - name: ensure mysql data directory exists
   file:
